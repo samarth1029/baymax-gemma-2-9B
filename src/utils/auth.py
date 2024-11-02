@@ -13,6 +13,7 @@ class Authenticator:
     def authenticate(self):
         if not self.hf_token or not self.wandb_token:
             raise ValueError("HUGGING_FACE_TOKEN or WANDB_TOKEN is not set in the .env file.")
+
         login(token=self.hf_token)
         wandb.login(key=self.wandb_token)
         print("Authenticated with Hugging Face and WandB")
