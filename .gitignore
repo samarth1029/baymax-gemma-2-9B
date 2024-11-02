@@ -151,3 +151,4 @@ credentials.yml
 # backup folders
 bkp/
 backup/
+/.idea/
