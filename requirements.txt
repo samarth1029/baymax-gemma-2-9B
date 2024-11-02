@@ -1,0 +1,8 @@
+torch
+transformers
+trl
+peft
+datasets
+huggingface-hub
+wandb
+python-dotenv
