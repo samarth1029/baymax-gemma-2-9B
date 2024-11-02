@@ -40,13 +40,11 @@ class Baymax:
     def setup_trainer(self):
         """Initialize the SFTTrainer with model, dataset, tokenizer, and training arguments."""
         training_args = get_training_arguments(self.new_model)
-        peft_config = get_lora_config()
-        peft_config.target_modules = ['k_proj', 'o_proj', 'gate_proj', 'q_proj', 'v_proj', 'up_proj', 'down_proj']
         self.trainer = SFTTrainer(
             model=self.model_loader.model,
             train_dataset=self.dataset["train"],
             eval_dataset=self.dataset["test"],
-            peft_config=peft_config,
+            peft_config=self.model_loader.lora_config,
             max_seq_length=512,
             dataset_text_field="text",
             tokenizer=self.model_loader.tokenizer,
