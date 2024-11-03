@@ -16,6 +16,7 @@ class Baymax:
         self.model_loader = None
         self.dataset = None
         self.trainer = None
+        self.DATASET_PATH = "lavita/ChatDoctor-HealthCareMagic-100k"
 
     def authenticate(self):
         """Authenticate with Hugging Face and WandB using tokens from .env file."""
@@ -31,9 +32,9 @@ class Baymax:
         self.model_loader.load_model(torch_dtype, attn_implementation)
         self.model_loader.setup_peft_model()
 
-    def load_data(self, dataset_name="lavita/ChatDoctor-HealthCareMagic-100k"):
+    def load_data(self):
         """Load and preprocess the dataset."""
-        data_loader = DataLoader(dataset_name, self.model_loader.tokenizer)
+        data_loader = DataLoader(self.DATASET_PATH, self.model_loader.tokenizer)
         self.dataset = data_loader.load_data()
         self.dataset = data_loader.preprocess(self.dataset)
 
