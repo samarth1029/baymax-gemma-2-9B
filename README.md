@@ -26,6 +26,7 @@ Baymax is a powerful tool designed to provide healthcare assistance and support 
 Here are some sample results from the project:
 
 ### Dataset Sample
+The model was trained on only 1000 training examples from dataset due to some hardware limitations.
 ![Dataset Sample](sample_results/dataset_sample.png)
 
 ### Sample Inference
