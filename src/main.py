@@ -9,7 +9,7 @@ import torch
 
 
 class Baymax:
-    def __init__(self, base_model="google/gemma-2-2b-it", new_model="Gemma-2-2b-baymax"):
+    def __init__(self, base_model="google/gemma-2-9b-it", new_model="Gemma-2-9b-baymax"):
         self.base_model = base_model
         self.new_model = new_model
         self.authenticator = Authenticator()
