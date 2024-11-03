@@ -14,11 +14,25 @@ Baymax is a powerful tool designed to provide healthcare assistance and support 
 
 ## Table of Contents
 
+- [Sample Results](#sample-results)
 - [Installation](#installation)
 - [Setup](#setup)
 - [Inference with Python Script](#inference-with-python-script)
 - [Inference with llama.cpp (GGUF format)](#inference-with-llamaccp-gguf-format)
 - [Example Usage](#example-usage)
+
+## Sample Results
+
+Here are some sample results from the project:
+
+### Dataset Sample
+![Dataset Sample](sample_results/dataset_sample.png)
+
+### Sample Inference
+![Sample Inference](sample_results/sample_inference.png)
+
+### Training Loss
+![Training Loss](sample_results/training_loss.png)
 
 ## Installation
 
